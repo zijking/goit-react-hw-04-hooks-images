@@ -54,7 +54,7 @@ function ImageGallery({ sword }) {
     // console.log('click more');
 
     await apiSearch.current.incrementPage();
-    console.log(apiSearch.current);
+    // console.log(apiSearch.current);
     await apiSearch.current.searchImg().then(res => {
       setImages(state => [...state, ...res.hits]);
 
@@ -64,9 +64,6 @@ function ImageGallery({ sword }) {
       top: document.documentElement.scrollHeight,
       behavior: 'smooth',
     });
-    // this.apiSearch.current.incrementPage();
-    // this.fetchImg();
-    // console.log(this);
   }
 
   return (
